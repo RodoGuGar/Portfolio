@@ -1,0 +1,298 @@
+<html>
+  <head>
+    <title>Tamalera</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="./vendor/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="./vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="background">
+
+    <dialog id="landingPage" class="landingPage">
+      <form action="" class="form">
+        <div class="container mt-4">
+          <header class="headerLog">
+            <h1>Bienvenidos a la Aplicación Tamalera</h1>
+          </header>
+        </div>
+  
+        <div class="login">
+          <div class="div1">
+            <div class="containerLogin">
+              <input type="checkbox" id="check">
+              <div class="login form">
+                <header>Login</header>
+                <form action="#">
+                  <input type="text" id='inUsr' placeholder="Enter your email">
+                 
+                  <div class="password-container">
+                    <input type="password" id="inPass" placeholder="Enter your password">
+                    <button class="toggle-password" type="button">
+                      <i class="bi bi-eye-fill"></i>
+                    </button>
+                  </div>
+                  
+                  <span class="signup">
+                    <a href="#" id="forgotLabel">Forgot password?</a>
+                  </span>
+                  <input type="button" class="button loginbtn" value="Login">
+                </form>
+                <div class="signup">
+                  <span class="signup">Don't have an account?
+                    <a href="#" id="signupLabel">Signup</a>
+                  </span>
+                </div>
+              </div>
+              <div class="registration form">
+                <header>Signup</header>
+                <form action="#">
+                  <input type="text" id="name" placeholder="Enter your name">
+                  <input type="text" id='username' placeholder="Enter your username">
+                  <input type="text" id='email' placeholder="Enter your email">
+                  <div class="password-container">
+                    <input type="password" id="password" placeholder="Create a password">
+                    <button class="toggle-password" type="button">
+                      <i class="bi bi-eye-fill"></i>
+                    </button>
+                  </div>
+                  <input type="button" class="button signupbtn" value="Signup">
+                </form>
+                <div class="signup">
+                  <span class="signup">Already have an account?
+                    <a href="#" id="loginLabel">Login</a>
+                  </span>
+                </div>
+              </div>
+              <div class="forgot form" >
+                <header>Forgot Password</header>
+                <form action="#">
+                  <input type="text" id='forgotinp' placeholder="Enter your email">
+                  <input type="button" class="button forgotbtn" value="Submit">
+                </form>
+                <div class="signup">
+                  <span class="signup">Don't have an account?
+                    <a href="#" id="signupLabel">Signup</a>
+                  </span>
+                </div>
+                <div class="signup">
+                  <span class="signup">Already have an account?
+                    <a href="#" id="loginLabel">Login</a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="div2">
+              <button id="noLog" class="btn btn-primary mt-3" type="button">Continue without login</button>
+          </div>
+            </div>
+          </div>
+  
+        </div>
+      </form>
+    </dialog>
+
+
+      <header class="header">
+            <h1>Bienvenidos a la Aplicación Tamalera</h1>
+            <label for="userActive" id="userActive" class="userActive"></label>
+            <button type="button" class="signoutbtn" id="signoutbtn">
+              <i class="bi bi-person-circle"></i> Sign Out
+            </button>
+          </header>
+
+          
+      <div class="container mt-4">
+      
+
+      <main>
+
+        <div class="row">
+          <div class="col-md-3">
+            <section class="controls">
+              <form class="controlsForms">
+                <label for="locationSelect" class="labels"><i class="bi bi-geo-alt-fill"></i>Location:</label>
+                <select
+                  name="locationSelect"
+                  id="locationSelect"
+                  class="form-select mb-2"
+                ></select><br>
+
+                <div class="inputAnim">      
+                  <input
+                    type="text"
+                    name="labTimeZone"
+                    id="labTimeZone"
+                    placeholder=" "
+                    class="formInput"
+                    disabled
+                  />
+                  <label for="labTimeZone" class="labelInp"><i class="bi bi-clock-fill"></i> Time zone</label>
+                </div><br>
+                
+                <div class="inputAnim"> 
+                  <input
+                    type="text"
+                    name="latitude"
+                    id="latitude"
+                    placeholder=" "
+                    class="formInput"
+                  />
+                  <label for="latitude" class="labelInp"><i class="bi bi-globe-europe-africa"></i> Latitude:</label>
+                </div><br>
+                
+                <div class="inputAnim"> 
+                  <input
+                    type="text"
+                    name="longitude"
+                    id="longitude"
+                    placeholder=" "
+                    class="formInput"
+                  />
+                  <label for="longitude" class="labelInp"><i class="bi bi-globe-central-south-asia"></i> Longitude</label>
+                </div><br>
+                
+                <div class="inputAnim">
+                  <input
+                    type="text"
+                    name="zoomInput"
+                    id="zoomInput"
+                    placeholder=" "
+                    class="formInput"
+                  />
+                  <label for="zoomInput" class="labelInp"><i class="bi bi-zoom-in"></i> Zoom:</label>
+                </div><br>
+
+                <input
+                  type="button"
+                  id="buttonSet"
+                  value="Move to"
+                  class="btn btn-primary w-100"
+                />
+              </form>
+
+              <div class="mt-3">
+                <h2><i class="bi bi-pin-map"></i>Select an Icon</h2>
+                
+                <div class="icon-selector">
+                  <select id="iconSelect" class="form-control"></select>
+                  <img id="iconImage" alt="" class="iconImage" />
+                  <button id="toggleFavoriteBtn" class="btn btn-star">
+                    <i class="bi bi-star"></i> Favorite
+                  </button>
+                </div>
+
+                <div class="favorites-section">
+                  <select id="favoriteSelect" class="form-control"></select>
+                  <button id="useFavoriteBtn" class="btn btn-primary">Use favorites</button>
+                </div>
+
+                <div class="buttons">
+                  <button id="hideIcons" class="buttons btn btn-primary mt-3">Hide icons</button><br>
+                  <button id="intLocations" class="buttons btn btn-primary mt-3">See interest locations</button><br>
+                  <label for="duration" id="duration"></label>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="col-md-9">
+            <section class="map">
+              <div id="map"></div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({ key: "AIzaSyD5qgBi2u00gnpbGPzKLbPGS9UtWpUWE9c", v: "weekly" });
+    </script>
+
+    <dialog class="popup">
+      <h1>Set Data</h1>
+      <form class="form" action="">
+        <div class="form-group">
+          <label for="latitude"><i class="bi bi-globe-europe-africa"></i>Latitude</label><br>
+          <input type="text" value="" name="inpLatitude" id="inpLatitude" class="form-control mb-2" disabled/>
+          	<small class="form-text text-muted"></small>
+        </div><hr>
+        <div class="form-group">
+            <label for="longitude"><i class="bi bi-globe-central-south-asia"></i>Longitude</label><br>
+            <input type="text" value="" name="inpLongitude" id="inpLongitude" class="form-control mb-2" disabled />
+            <small class="form-text text-muted"></small>
+        </div><hr>
+        <div class="form-group">
+            <label for="timeZone"><i class="bi bi-clock-fill"></i>Time zone</label><br>
+            <input type="text" value="" name="timeZone" id="timeZone" class="form-control mb-2" disabled />
+            <small class="form-text text-muted"></small>
+        </div><hr>
+        <div class="form-group">
+            <label for="currentTime"><i class="bi bi-clock-fill"></i>Time</label><br>
+            <input type="text" value="" name="currentTime" id="currentTime" class="form-control mb-2" disabled />
+            <small class="form-text text-muted"></small>
+        </div><hr>
+        <div class="form-group">
+            <label for="inpName"><i class="bi bi-geo-alt-fill"></i>Place name</label><br>
+            <input type="text" value="" name="placeName" id="placeName" class="form-control mb-2" required/><br>
+            <small id="warning" class="form-text text-muted"></small>
+        </div><hr>
+        <input id="pupopButton" type="submit" value="Save" class="btn btn-primary"/>
+        <input id="pupopCloseButton" type="submit" value="Cancel" class="btn btn-primary"/>
+      </form>
+    </dialog>
+
+
+
+    <footer>
+      <div class="footer">
+        <h4>Made by Rodolfo Alejandro Guerra Garcia</h4>
+        <p>Check-out my other social media</p>
+        <div>
+          <a href="https://github.com/RodoGuGar" target="_blank"><i class="bi bi-github socialIcons"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100051870703055&mibextid=JRoKGi" target="_blank"><i class="bi bi-facebook socialIcons"></i></a>
+          <a href="https://www.instagram.com/rodo__guerra?igsh=dXh3dHpvODh1aXdo" target="_blank"><i class="bi bi-instagram socialIcons"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script type="module" src="Script.js"></script>
+  </body>
+</html>
